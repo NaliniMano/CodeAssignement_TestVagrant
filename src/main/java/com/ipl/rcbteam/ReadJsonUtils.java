@@ -28,20 +28,20 @@ public class ReadJsonUtils {
 		}
 		catch(ParseException e)
 		{
-			System.out.println("Unable to Parse"+e);
+			System.out.println("Unable to Parse : "+e);
 		}
 		catch(IOException e)
 		{
-			System.out.println("File not found"+e);
+			System.out.println("File not found ! "+e);
 		}
 		catch(Exception e)
 		{
-			System.out.println("print exception"+e);
+			System.out.println("Exception Message : "+e);
 		}
 	}
 	
 	/**
-	 * get data from JSON  and the count of
+	 * get data from JSON  and find the count 
 	 * foreignplayercount and wicketkeepercount
 	 * @return void
 	 */
@@ -49,18 +49,24 @@ public class ReadJsonUtils {
 		try
 		{
 			if(rcbTeam_Object!=null) {
-				JSONArray rcbplayerArr = (JSONArray) rcbTeam_Object.get("player");
+				JSONArray rcbteamArr = (JSONArray) rcbTeam_Object.get("player");
 				
-				for(int i=0;i<rcbplayerArr.size();i++) { 
-					JSONObject rcbplayer=(JSONObject)rcbplayerArr.get(i);
-					String country=(String)rcbplayer.get("country");
-                   if(!country.equals("India")) foreignPlayerCount++;
-                   
-					String role=(String)rcbplayer.get("role");
-					if(role.equals("Wicket-keeper")) wicketKeeperCount++;			
-				}
+				if(rcbteamArr.size()>=1) {
+			     	 for(int i=0;i<rcbteamArr.size();i++) { 
+				  	  JSONObject rcbplayer=(JSONObject)rcbteamArr.get(i);
+					  String country=(String)rcbplayer.get("country");
+                     if(!country.equals("India")) foreignPlayerCount++;
+					   String role=(String)rcbplayer.get("role");
+					   if(role.equals("Wicket-keeper")) wicketKeeperCount++;
+			     	 }
+			     	
+				 }
+				 else
+		     	 {
+		     		System.out.println("Players details not found in JSON");
+		     	 }
 			}else {
-				System.out.println("No data foud in JSON");
+				System.out.println("Input JSON is empty");
 			}
 		 }catch(Exception e)
 		    {
@@ -71,7 +77,7 @@ public class ReadJsonUtils {
 
 	private static void printException(Exception e) {
 		// TODO Auto-generated method stub
-		System.out.println("Exception Message: "+e.getMessage());
-		System.out.println("Stack Trace: "+e.getStackTrace());		
+		System.err.println("Exception happened due to invalid data: "+e.getMessage());
+		System.err.println("Stack Trace: "+e.getStackTrace());	
 	}
 }
