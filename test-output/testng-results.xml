@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-11T12:50:16Z" name="Suite" finished-at="2023-01-11T12:50:16Z" duration-ms="119">
+    <groups>
+    </groups>
+    <test started-at="2023-01-11T12:50:16Z" name="Test" finished-at="2023-01-11T12:50:16Z" duration-ms="119">
+      <class name="com.ipl.rcbteam.testcases.RCBTeamValidationTest">
+        <test-method is-config="true" signature="preSetUp()[pri:0, instance:com.ipl.rcbteam.testcases.RCBTeamValidationTest@2ce6c6ec]" started-at="2023-01-11T12:50:16Z" name="preSetUp" finished-at="2023-01-11T12:50:16Z" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preSetUp -->
+        <test-method signature="validateForeignPlayer(int)[pri:0, instance:com.ipl.rcbteam.testcases.RCBTeamValidationTest@2ce6c6ec]" started-at="2023-01-11T12:50:16Z" name="validateForeignPlayer" finished-at="2023-01-11T12:50:16Z" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateForeignPlayer -->
+        <test-method signature="validateWicketKeeper(int)[pri:0, instance:com.ipl.rcbteam.testcases.RCBTeamValidationTest@2ce6c6ec]" started-at="2023-01-11T12:50:16Z" name="validateWicketKeeper" finished-at="2023-01-11T12:50:16Z" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateWicketKeeper -->
+      </class> <!-- com.ipl.rcbteam.testcases.RCBTeamValidationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

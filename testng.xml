@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test thread-count="5" name="Test">
+ <parameter name="foreign_player" value="4"></parameter>
+ <parameter name="wicket_keeper" value="1"></parameter>
+    <classes>
+      <class name="com.ipl.rcbteam.testcases.RCBTeamValidationTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

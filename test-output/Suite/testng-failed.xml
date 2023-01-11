@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="foreign_player" value="4"/>
+    <parameter name="wicket_keeper" value="1"/>
+    <classes>
+      <class name="com.ipl.rcbteam.testcases.RCBTeamValidationTest">
+        <methods>
+          <include name="validateWicketKeeper"/>
+          <include name="validateForeignPlayer"/>
+          <include name="preSetUp"/>
+        </methods>
+      </class> <!-- com.ipl.rcbteam.testcases.RCBTeamValidationTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
