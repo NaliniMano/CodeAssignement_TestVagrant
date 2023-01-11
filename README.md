@@ -12,13 +12,13 @@
 
 <h2>Steps to Run Project</h2>
 <ul>
-  <li>using maven commands</li>
+  <li>1. using maven commands</li>
   <li>clone this project and run tests as mvn clean test </li>
   <li>Once test execution completed verify the  report under  /TeamRCB/test-output/emailable-report.html </li>
 </ul>
   
   <ul>
-  <li>using testng XML </li>
+  <li>2. using testng XML </li>
   <li>clone this project and run testng.xml </li>
-  <li>Once test execution completed verify the  report under  /TeamRCB/test-output/emailable-report.html </li>
+  <li> verify the  testresults under  /TeamRCB/test-output/emailable-report.html </li>
 </ul>
