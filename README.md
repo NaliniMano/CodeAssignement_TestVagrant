@@ -13,7 +13,7 @@
 <h2>Steps to Run Project</h2>
 <ul>
   <li>1. using maven commands</li>
-  <li>clone this project and run tests as mvn clean test </li>
+  <li>clone this project and run command mvn clean test </li>
   <li>Once test execution completed verify the  report under  /TeamRCB/test-output/emailable-report.html </li>
 </ul>
   
