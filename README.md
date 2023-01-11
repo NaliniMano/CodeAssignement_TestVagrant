@@ -1,4 +1,4 @@
-# CodeAssignement_TestVagrant
+# CodeAssignment_TestVagrant
 
 <h2>Problem Statement:</h2>
 <ul>
