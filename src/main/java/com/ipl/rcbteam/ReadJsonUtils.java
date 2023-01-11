@@ -15,36 +15,58 @@ public class ReadJsonUtils {
 	protected static int wicketKeeperCount;
 	protected static int foreignPlayerCount;
 	
-	public static void readJsonFile() throws IOException, ParseException {
+	/***
+	 * read the JSON file 
+	 * 
+	 */
+	public static void readJsonFile() {
+		try {
 	JSONParser jsonparser = new JSONParser();
-	FileReader reader = new FileReader("./src/test/resources/testdata/TeamRCB.json");
-	Object object = jsonparser.parse(reader);
+	FileReader file_reader = new FileReader("./src/test/resources/testdata/TeamRCB.json");
+	Object object = jsonparser.parse(file_reader);
 	rcbTeam_Object = (JSONObject) object;
+		}
+		catch(ParseException e)
+		{
+			System.out.println("Unable to Parse"+e);
+		}
+		catch(IOException e)
+		{
+			System.out.println("File not found"+e);
+		}
+		catch(Exception e)
+		{
+			System.out.println("print exception"+e);
+		}
 	}
 	
 	/**
-	 * Fetch data from JSON Array
-	 * 
+	 * get data from JSON  and the count of
+	 * foreignplayercount and wicketkeepercount
 	 * @return void
 	 */
 	public static void fetchData(){
-		try {
+		try
+		{
 			if(rcbTeam_Object!=null) {
-				JSONArray playerArr = (JSONArray) rcbTeam_Object.get("player");
-				for(int i=0;i<playerArr.size();i++) { 
-					JSONObject player=(JSONObject)playerArr.get(i);
-					String country=(String)player.get("country");
-					
-					if(!country.equals("India")) foreignPlayerCount++;
-					String role=(String)player.get("role");
+				JSONArray rcbplayerArr = (JSONArray) rcbTeam_Object.get("player");
+				
+				for(int i=0;i<rcbplayerArr.size();i++) { 
+					JSONObject rcbplayer=(JSONObject)rcbplayerArr.get(i);
+					String country=(String)rcbplayer.get("country");
+                   if(!country.equals("India")) foreignPlayerCount++;
+                   
+					String role=(String)rcbplayer.get("role");
 					if(role.equals("Wicket-keeper")) wicketKeeperCount++;			
 				}
 			}else {
-				System.out.println("Unable to fetch data");
+				System.out.println("No data foud in JSON");
 			}
-		}catch(Exception e) {
-			printException(e);
-		}
+		 }catch(Exception e)
+		    {
+			 printException(e);
+		    }
+		
 	}
 
 	private static void printException(Exception e) {
