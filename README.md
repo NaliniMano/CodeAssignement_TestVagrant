@@ -23,3 +23,15 @@
   <li>clone this project and run testng.xml </li>
   <li> verify the  testresults under  /TeamRCB/test-output/emailable-report.html </li>
 </ul>
+
+<h2>Project Setup </h2>
+<ul>
+<li>Create a Maven project   added dependencies for TestNG, JSon-Simple in POM. XML</li>
+<li>Folder Structure  :</li>
+<li>src/main/java contains ReadJSonUtils.java holds the logic to read the JSON file and find the count of Foriegn Players and WicketKeeper from input Json </li>
+<li>src/test/test contains RCBTeamValidationTest.java contains the test method to assert foriegn players and Wicket keeper . </li>
+<li>src/test/resources contains input Json file</li>
+<li>Testing.XML --> contains parameter here will  pass the foreignplayer and wicketkeeper count</li>
+<li>Report-->/test-output/emailable-report.html</li>
+
+
