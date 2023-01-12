@@ -7,7 +7,8 @@
   
 <h2>TechStack:</h2>
 <ul>
-<li>Java 8,Eclipse IDE, Maven,TestNG,JSON-Simple</li>
+<li>Java 8,Maven,TestNG,JSON-Simple</li>
+<li> IDE : Eclipse </li>
 </ul>
 
 <h2>Steps to Run Project</h2>
